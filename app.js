@@ -20,16 +20,16 @@ var PubSub = {
     var args = Array.prototype.slice.call(arguments, 0);
     var event = args.shift();
 
-    var list, i, l;
+    var callbacks, i, l;
     if (!this._callbacks) {
       return this;
     }
-    if (!(list = this._callbacks[event])) {
+    if (!(callbacks = this._callbacks[event])) {
       return this;
     }
 
-    for (i = 0, l = list.length; i < l; i += i + 1) {
-      list[i].apply(this, args);
+    for (i = 0, l = callbacks.length; i < l; i += i + 1) {
+      callbacks[i].apply(this, args);
     }
 
     return this;
