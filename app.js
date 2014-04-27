@@ -24,7 +24,7 @@ var PubSub = {
     if (!this._callbacks) { // subscribeが一度も実行されてない
       return this;
     }
-    if (!(callbacks = this._callbacks[event])) {
+    if (!(callbacks = this._callbacks[event])) { // イベントに対応するハンドラが無い
       return this;
     }
 
