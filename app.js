@@ -28,6 +28,7 @@ var PubSub = {
       return this;
     }
 
+    // 登録してあるコールバック関数をすべて実行
     for (i = 0, l = callbacks.length; i < l; i += i + 1) {
       callbacks[i].apply(this, args);
     }
