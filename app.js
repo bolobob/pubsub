@@ -3,7 +3,8 @@ var PubSub = {
    * イベントハンドラ登録
    *
    * @param  {String}   event
-   * @return {Function} callback
+   * @param  {Function} callback
+   * @return {Object}
    */
   subscribe: function(event, callback) {
     var calls = this._callbacks || (this._callbacks = {});
