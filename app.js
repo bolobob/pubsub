@@ -21,7 +21,7 @@ var PubSub = {
     var event = args.shift();
 
     var callbacks, i, l;
-    if (!this._callbacks) {
+    if (!this._callbacks) { // subscribeが一度も実行されてない
       return this;
     }
     if (!(callbacks = this._callbacks[event])) {
