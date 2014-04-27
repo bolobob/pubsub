@@ -7,7 +7,7 @@ var PubSub = {
    */
   subscribe: function(event, callback) {
     var calls = this._callbacks || (this._callbacks = {});
-    (this._callbacks[event] || (this._callbacks[event] = [])).push(callback);
+    (this._callbacks[event] || (this._callbacks[event] = [])).push(callback); // １つのイベントに複数のコールバック関数を登録できる
 
     return this;
   },
